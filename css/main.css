@@ -585,3 +585,27 @@ body {
 .section-05 .list .item .rank{
     object-fit: cover;
 }
+
+
+.bottom_nav{
+    width: 402px;
+    margin: 0 auto;
+}
+.bottom_nav .tab_nav{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+}
+.bottom_nav .tab_nav li{
+    width: 33px;
+    height: 45px;
+}
+.bottom_nav .tab_nav li img{
+    width: 100%;
+    object-fit: cover;
+}
+.bottom_nav .tab_nav li b{
+    font-size: 10px;
+    font-weight: 500;
+}
