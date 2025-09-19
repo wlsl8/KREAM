@@ -30,7 +30,7 @@
                         tabMenuIndex.classList.remove('active');
                     });
                     tabMenu[i].classList.add('active');
-                
+
 
                     tabCont.forEach(tabContIndex => {
                         tabContIndex.classList.remove('active');
@@ -69,8 +69,9 @@
         <main class="main">
             <div class="inner">
                 <div class="search">
+                    <input type="text" name="" id="" placeholder="">
                     <button class="camera">
-                        <img src="img/카메라아이콘.png" alt="카메라아이콘">
+                        <img src="img/카메라렌즈.png" alt="카메라아이콘">
                     </button><!-- camera -->
                 </div><!-- search -->
 
@@ -265,7 +266,7 @@
                             <a href="#">
                                 <img src="img/최근본상품img-1.png" alt="최근본상품">
                                 <div class="text">
-                                    <p>Arc’teryx Ato...</p>
+                                    <p>Arc'teryx Atom SL Hoody Solitude</p>
                                     <b>410,000원</b>
                                     <span>관심 5,307</span>
                                 </div><!-- text -->
@@ -1563,32 +1564,91 @@
 
         <div class="bottom_nav">
             <ul class="tab_nav">
-                        <li>
-                            <img src="img/4.png" alt="홈아이콘">
-                            <b>HOME</b>
-                        </li>
-                        <li>
-                            <img src="img/5.png" alt="스타일아이콘">
-                            <b>STYLE</b>
-                        </li>
-                        <li>
-                            <img src="img/3.png" alt="샵아이콘">
-                            <b>SHOP</b>
-                        </li>
-                        <li>
-                            <img src="img/1.png" alt="저장아이콘">
-                            <b>SAVED</b>
-                        </li>
-                        <li>
-                            <img src="img/2.png" alt="마이아이콘">
-                            <b>MY</b>
-                        </li>
-                    </ul><!-- tab_nav -->
+                <li>
+                    <img src="img/homeicon.png" alt="홈아이콘">
+                    <b>HOME</b>
+                </li>
+                <li>
+                    <img src="img/styleicon.png" alt="스타일아이콘">
+                    <b>STYLE</b>
+                </li>
+                <li>
+                    <img src="img/shopicon.png" alt="샵아이콘">
+                    <b>SHOP</b>
+                </li>
+                <li>
+                    <img src="img/savedicon.png" alt="저장아이콘">
+                    <b>SAVED</b>
+                </li>
+                <li>
+                    <img src="img/myicon.png" alt="마이아이콘">
+                    <b>MY</b>
+                </li>
+            </ul><!-- tab_nav -->
         </div><!-- bottom_nav -->
 
 
         <footer class="footer">
+            <div class="inner">
+                <div class="info_wrap">
+                    <div class="address">
+                        <div class="depth-01">
+                            <h3>고객센터 <a href="tel:1588-7813">1588-7813</a></h3>
+                            <ul>
+                                <li>운영시간 평일 10:00 - 18:00 (토 일, 공휴일 휴무)</li>
+                                <li>점심시간 평일 13:00 - 14:00</li>
+                            </ul>
+                        </div><!-- depth-1 -->
+                        <div class="depth-02">
+                            <h4>자주 묻는 질문</h4>
+                            <p><a href="#">1:1 문의</a></p>
+                        </div><!-- depth-2 -->
+                    </div><!-- address -->
 
+                    <div class="footer_nav">
+                        <div class="depth-01">
+                            <ul class="gnb">
+                                <h3>이용안내</h3>
+                                <li><a href="#">검수기준</a></li>
+                                <li><a href="#">이용 정책</a></li>
+                                <li><a href="#">페널티 정책</a></li>
+                                <li><a href="#">커뮤니티 가이드라인</a></li>
+                            </ul><!-- gnb -->
+                        </div><!-- depth-01 -->
+                        <div class="depth-02">
+                            <ul class="gnb">
+                                <h3>고객지원</h3>
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">서비스 소개</a></li>
+                                <li><a href="#">스토어 안내</a></li>
+                                <li><a href="#">판매자 방문접수</a></li>
+                            </ul>
+                        </div><!-- depth-02 -->
+                    </div><!-- footer_nav -->
+                </div><!-- info_wrap -->
+
+                <div class="servise_wrap">
+                    <ul class="servise">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                    </ul><!-- servise -->
+                    <div class="snsinfo">
+                        <ul class="sns">
+                            <li><a href="#"><img src="img/instagramicon.png" alt="인스타그램"></a></li>
+                            <li><a href="#"><img src="img/facebookicon.png" alt="페이스북"></a></li>
+                            <li><a href="#"><img src="img/kakaoicon.png" alt="카카오톡"></a></li>
+                        </ul><!-- sns -->
+                        <ul class="info">
+                            <li>사업자정보</li>
+                            <li><img src="img/아래더보기아이콘.png" alt="아래더보기아이콘"></li>
+                        </ul><!-- info -->
+                    </div><!-- snsinfo -->
+                    <p>크림(주)는 통신판매 중개자로서 통신판매의 당사자가 아닙니다. 본 상품은<br>
+                        개별 판매자가 등록한 상품으로 상품, 상품정보, 거래에 관한 의무와 책임은 각<br>
+                        판매자에게 있습니다. 단, 이용약관 및 정책, 기타 거래 체결 과정에서 고지하는<br>
+                        내용 등에 따라 검수하고 보증하는 내용에 대한 책임은 크림(주)에 있습니다.</p>
+                </div><!-- servise_wrap -->
+            </div><!-- inner -->
         </footer><!-- footer -->
     </div><!-- wrap -->
 </body>

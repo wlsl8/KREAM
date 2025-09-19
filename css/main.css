@@ -54,60 +54,87 @@ body {
 }
 
 #wrap {
-    max-width: 1024px;
+    max-width: 480px;
     margin: 0 auto;
     background-color: #fff;
 }
 
 
 .header {
-    width: 402px;
+    min-width: 480px;
     height: 29px;
     margin: 0 auto;
 }
 
 .header .inner {
-    margin: 60px 20px 0px;
+    width: calc(100% - 78px);
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .header .inner .logo a img {
-    width: 110px;
+    width: 27.29%;
+    object-fit: cover;
+}
+
+.header .inner .nav{
+    display: flex;
+    width: 68px;
     height: 100%;
-    object-fit: cover;
 }
 
-.header .inner .nav button {
-    width: 29px;
-    height: 29px;
+.header .inner .nav .bell img{
+    width: 31.3%;
     object-fit: cover;
-}
-
-.header .inner .nav .bell {
     margin-right: 10px;
+}
+.header .inner .nav .cart img{
+    width: 28%;
+    object-fit: cover;
 }
 
 
 
 .main {
-    width: 402px;
+    min-width: 480px;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-bottom: 17px;
+}
+.main .inner{
+    width: calc(100% - 78px);
     margin: 0 auto;
 }
-
-.main .inner .search .camera {
-    width: 362px;
+.main .inner .search{
+    position: relative;
+    width: 100%;
+    max-width: 362px;
+    margin: 0 auto;
+}
+ .main .inner .search .camera{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 0;
+ }
+.main .inner .search input[type="text"]{
+    width: 100%;
     height: 40px;
-    margin: 8px 20px 17px;
     border-radius: 5px;
     background-color: #E9E9E9;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 0;
 }
-
+.main .inner .search input:focus{
+    outline: 2px solid #333;
+    border: 0;
+    color: #333;
+}
 .main .inner .search .camera img {
     width: 21.83px;
     height: 21.83px;
@@ -115,13 +142,16 @@ body {
 }
 
 
+
 .main_visual {
     max-width: 402px;
     margin: 0 auto;
 }
+
 .main_visual .swiper-wrapper {
     align-items: center;
 }
+
 /* .main_visual .swiper {
     padding: 100px 0;
 
@@ -134,17 +164,20 @@ body {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
 }
+
 .main_visual .swiper-slide.swiper-slide-active {
     transform: scale(1);
     z-index: 99;
     opacity: 1;
 }
+
 .main_visual .swiper-slide img {
     width: 100%;
     height: 370px;
     object-fit: cover;
     border-radius: 20px;
 }
+
 .main_visual .swiper-slide .text {
     position: absolute;
     bottom: 25px;
@@ -196,9 +229,8 @@ body {
     transform: scale(1.1);
 }
 
-
 .main_visual .nav {
-    margin: 25px 0 75px;
+    margin: 25px 20px 75px;
 }
 
 .main_visual .nav .gnb {
@@ -224,8 +256,8 @@ body {
 }
 
 .main_visual .nav .gnb li a img {
-    width: 40px;
-    height: 40px;
+    width: 61.53%;
+    height: 61.53%;
     object-fit: contain;
 }
 
@@ -236,7 +268,10 @@ body {
 
 
 .section-01 {
-    margin: 0 20px 75px;
+    margin-left: 20px;
+    margin-bottom: 75px;
+    padding-bottom: 50px;
+    border-bottom: 10px solid #eee;
 }
 
 .section-01 .title {
@@ -268,7 +303,6 @@ body {
 
 .section-01 .list .item img {
     width: 100%;
-    height: 67.2%;
     object-fit: cover;
     margin-bottom: 5px;
 }
@@ -277,30 +311,39 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 5px;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .section-01 .list .item .text p {
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 1px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .section-01 .list .item .text b {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 7px;
+    white-space: nowrap;
 }
 
 .section-01 .list .item .text span {
     font-size: 12px;
-    font-weight: 200;
-    color: #B4B4B4;
+    font-weight: 400;
+    color: #8D8D8D;
+    white-space: nowrap;
 }
 
 .section-02 {
-    margin: 0 20px 90px;
+    margin-left: 20px;
+    margin-bottom: 90px;
+    padding-bottom: 50px;
+    border-bottom: 10px solid #eee;
 }
 
 .section-02 .title {
@@ -344,7 +387,6 @@ body {
 
 .section-02 .list img {
     width: 100%;
-    height: 67.2%;
     object-fit: cover;
     margin-bottom: 5px;
 }
@@ -353,30 +395,39 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 5px;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .section-02 .list .text p {
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 1px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .section-02 .list .text b {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 7px;
+    white-space: nowrap;
 }
 
 .section-02 .list .text span {
     font-size: 12px;
-    font-weight: 200;
-    color: #B4B4B4;
+    font-weight: 400;
+    color: #8D8D8D;
+    white-space: nowrap;
 }
 
 .section-03 {
-    margin: 0 20px 80px;
+    margin-left: 20px;
+    margin-bottom: 80px;
+    padding-bottom: 50px;
+    border-bottom: 10px solid #eee;
 }
 
 .section-03 .title {
@@ -439,6 +490,8 @@ body {
 
 .section-04 {
     margin: 0 15px 105px;
+    padding-bottom: 50px;
+    border-bottom: 10px solid #eee;
 }
 
 .section-04 h2 {
@@ -491,20 +544,24 @@ body {
 .section-05 {
     margin: 0 20px 115px;
 }
+
 .section-05 h2 {
     margin-bottom: 25px;
     font-size: 20px;
     font-weight: 700;
 }
+
 .section-05 .tab_menu {
     display: flex;
     gap: 8px;
     margin-bottom: 20px;
     overflow: auto;
 }
+
 .section-05 .tab_menu::-webkit-scrollbar {
     display: none;
 }
+
 .section-05 .tab_menu li {
     height: 30px;
     background-color: #E9E9E9;
@@ -519,12 +576,14 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .section-05 .tab_menu li.active {
     background-color: #F8742E;
     color: #fff;
     font-weight: 600;
 }
-.section-05 .list{
+
+.section-05 .list {
     display: flex;
     align-items: center;
     gap: 80px;
@@ -532,7 +591,8 @@ body {
     overflow: auto;
     display: none;
 }
-.section-05 .list.active{
+
+.section-05 .list.active {
     display: block;
     display: flex;
     align-items: center;
@@ -540,72 +600,176 @@ body {
     margin-left: 10px;
     overflow: auto;
 }
+
 .section-05 .list::-webkit-scrollbar {
     display: none;
 }
-.section-05 .list .item{
+
+.section-05 .list .item {
     width: 285px;
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.section-05 .list .item .num b{
+
+.section-05 .list .item .num b {
     font-size: 20px;
     font-weight: 700;
     margin-right: 17px;
 }
-.section-05 .list .item img{
+
+.section-05 .list .item img {
     width: 22.1%;
     height: 100%;
     object-fit: cover;
     margin-right: 16px;
 }
-.section-05 .list .item .text{
+
+.section-05 .list .item .text {
     display: flex;
     flex-direction: column;
     margin-right: 37px;
     white-space: nowrap;
     overflow: hidden;
 }
-.section-05 .list .item .text p{
+
+.section-05 .list .item .text p {
     font-size: 13px;
     font-weight: 600;
     margin-bottom: 1px;
 }
-.section-05 .list .item .text span{
+
+.section-05 .list .item .text span {
     font-size: 13px;
     font-weight: 500;
     margin-bottom: 10px;
 }
-.section-05 .list .item .text b{
+
+.section-05 .list .item .text b {
     font-size: 15px;
     font-weight: 700;
 }
-.section-05 .list .item .rank{
+
+.section-05 .list .item .rank {
     object-fit: cover;
 }
 
 
-.bottom_nav{
-    width: 402px;
+.bottom_nav {
+    max-width: 480px;
+    width: 100%;
     margin: 0 auto;
+    padding: 12px 25px 32px;
+    background-color: #fff;
+    border-top: 1px solid #E9E9E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
 }
-.bottom_nav .tab_nav{
+
+.bottom_nav .tab_nav {
     display: flex;
     gap: 50px;
     align-items: center;
     text-align: center;
 }
-.bottom_nav .tab_nav li{
-    width: 33px;
+
+.bottom_nav .tab_nav li {
+    width: 30px;
     height: 45px;
 }
-.bottom_nav .tab_nav li img{
+
+.bottom_nav .tab_nav li:nth-child(3) {
+    width: 40px;
+}
+
+.bottom_nav .tab_nav li:nth-child(3) img {
     width: 100%;
+    object-fit: fill;
+}
+
+.bottom_nav .tab_nav li img {
+    width: 83.33%;
+    height: 60%;
     object-fit: cover;
 }
-.bottom_nav .tab_nav li b{
+
+.bottom_nav .tab_nav li b {
     font-size: 10px;
     font-weight: 500;
 }
+
+
+.footer {
+    background-color: #F1F1F1;
+    padding: 30px 0 0 20px;
+}
+
+.footer .inner {}
+
+.footer .inner .info_wrap {}
+
+.footer .inner .info_wrap .address {}
+
+.footer .inner .info_wrap .address .depth-01 {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .inner .info_wrap .address .depth-01 h3 {}
+
+.footer .inner .info_wrap .address .depth-01 ul {}
+
+.footer .inner .info_wrap .address .depth-01 ul li {}
+
+.footer .inner .info_wrap .address .depth-02 {}
+
+.footer .inner .info_wrap .address .depth-02 h4 {}
+
+.footer .inner .info_wrap .address .depth-02 p {}
+
+
+.footer .inner .info_wrap .footer_nav {}
+
+.footer .inner .info_wrap .footer_nav .depth-01 {}
+
+.footer .inner .info_wrap .footer_nav .depth-01 .gnb {}
+
+.footer .inner .info_wrap .footer_nav .depth-01 .gnb h3 {}
+
+.footer .inner .info_wrap .footer_nav .depth-01 .gnb li {}
+
+.footer .inner .info_wrap .footer_nav .depth-02 {}
+
+.footer .inner .info_wrap .footer_nav .depth-02 .gnb {}
+
+.footer .inner .info_wrap .footer_nav .depth-02 .gnb h3 {}
+
+.footer .inner .info_wrap .footer_nav .depth-02 .gnb li {}
+
+
+.footer .inner .servise_wrap {}
+
+.footer .inner .servise_wrap .servise {}
+
+.footer .inner .servise_wrap .servise li {}
+
+.footer .inner .servise_wrap .snsinfo {}
+
+.footer .inner .servise_wrap .snsinfo .sns {}
+
+.footer .inner .servise_wrap .snsinfo .sns li {}
+
+.footer .inner .servise_wrap .snsinfo .sns li img {}
+
+.footer .inner .servise_wrap .snsinfo .info {}
+
+.footer .inner .servise_wrap .snsinfo .info li {}
+
+.footer .inner .servise_wrap .snsinfo .info li img {}
+
+.footer .inner .servise_wrap p {}
