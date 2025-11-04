@@ -43,6 +43,23 @@
             setupTabs(".bottom_nav .tab_nav li");
 
 
+            const tabs = document.querySelectorAll('.tab_menu li');
+            const lists = document.querySelectorAll('.section-05 .list');
+
+            tabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => {
+                    // 1. 모든 탭 비활성화
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // 2. 클릭한 탭 활성화
+                    tab.classList.add('active');
+
+                    // 3. 모든 리스트 숨기기
+                    lists.forEach(list => list.classList.remove('active'));
+                    // 4. 클릭한 탭에 해당하는 리스트 보이기
+                    lists[index].classList.add('active');
+                });
+            });
+
             var innerSwiper02 = new Swiper('.swiper-container', {
                 loop: true,
                 slidesPerView: 'auto',
@@ -74,6 +91,19 @@
                 spaceBetween: 20,
                 freeMode: true,
             });
+
+
+            var swiper = new Swiper(".swiper.pop", {
+                slidesPerView: "auto",
+                spaceBetween: 8,
+                freeMode: true,
+            });
+
+            var swiper = new Swiper(".swiper.poplist", {
+                slidesPerView: "auto",
+                spaceBetween: 8,
+            });
+            
 
         };//end
 
@@ -285,7 +315,6 @@
                         </ul><!-- gnb -->
                     </div><!-- nav -->
                 </section><!-- main_visual -->
-
 
 
                 <section class="section-01">
@@ -764,852 +793,952 @@
                 <section class="section-05">
                     <h2>이번 주 인기 상품</h2>
                     <ul class="tab_menu">
-                        <li>신발</li>
-                        <li>의류</li>
-                        <li>가방</li>
-                        <li>패션잡화</li>
-                        <li>뷰티</li>
-                        <li>주얼리</li>
-                        <li>테크</li>
+                        <div class="swiper pop">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <li class="active">신발</li>
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <li>의류</li>
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <li>가방</li>
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <li>패션잡화</li>
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <li>뷰티</li>
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <li>주얼리</li>
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <li>테크</li>
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper pop -->
                     </ul><!-- tab_menu -->
+
                     <div class="list active">
-                        <div class="depth-01">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-1.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-2.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-3.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-4.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper poplist">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="depth-01">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>1</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-1.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>New Balance</p>
+                                                <span>204L Suede Mushroom Arid Stone</span>
+                                                <b>194,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-5.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-6.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-7.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/신발인기상품-8.png" alt="신발인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>2</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-2.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>Adidas</p>
+                                                <span>Adizero EVO SL Core Black Cloud White</span>
+                                                <b>173,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>3</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-3.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>Nike</p>
+                                                <span>Nike x Supreme SB Dunk Low Black</span>
+                                                <b>199,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>4</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-4.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>SATUR</p>
+                                                <span>SATUR X KEEN JASPER ZIONIC Light Pink</span>
+                                                <b>249,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-01 -->
+                                </div><!-- swiper-slide -->
+
+                                <div class="swiper-slide">
+                                    <div class="depth-02">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>5</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-5.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>Nike</p>
+                                                <span>Nike x Supreme SB Dunk Low Camper Green</span>
+                                                <b>319,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>6</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-6.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>Mizuno</p>
+                                                <span>LG 60S 2K Brown</span>
+                                                <b>104,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankdownicon.png" alt="랭킹다운">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>7</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-7.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>Asics</p>
+                                                <span>Superblast 2 Blue Fade Edo Purple</span>
+                                                <b>241,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>8</b>
+                                            </div><!-- num -->
+                                            <img src="img/신발인기상품-8.png" alt="신발인기상품">
+                                            <div class="text">
+                                                <p>Asics</p>
+                                                <span>Superblast 2 Black White</span>
+                                                <b>239,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-02 -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper poplist -->
                     </div><!-- list -->
 
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-1.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-2.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-3.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-4.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper poplist">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="depth-01">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>1</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-1.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Adidas</p>
+                                                <span>Real Madrid Originals Track Top Charcoal Grey</span>
+                                                <b>91,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>2</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-2.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Matin Kim</p>
+                                                <span>Spell Point Stripe Knit Cardigan Black</span>
+                                                <b>139,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>3</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-3.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Carhartt</p>
+                                                <span>204L Suede Mushr...</span>
+                                                <b>42,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>4</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-4.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Adidas</p>
+                                                <span>Manchester United Originals Track Top Black Red</span>
+                                                <b>82,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-01 -->
+                                </div><!-- swiper-slide -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-5.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-6.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-7.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/의류인기상품-8.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                <div class="swiper-slide">
+                                    <div class="depth-02">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>5</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-5.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Knitted</p>
+                                                <span>Curved Training Pants Black</span>
+                                                <b>42,800원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>6</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-6.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Deus Ex Machina</p>
+                                                <span>College Address Windbreaker Jacket Black</span>
+                                                <b>178,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>7</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-7.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Safarispot X BEARS</p>
+                                                <span>Fleece Reversible Jacket - Navy</span>
+                                                <b>219,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>8</b>
+                                            </div><!-- num -->
+                                            <img src="img/의류인기상품-8.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Nike</p>
+                                                <span>Storm Fit Swift Running Jacket Pale Ivory</span>
+                                                <b>166,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-02 -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper poplist -->
                     </div><!-- list -->
 
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-1.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-2.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-3.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-4.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper poplist">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="depth-01">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>1</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-1.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Kwon Jin Ah x Safarispot</p>
+                                                <span>Jinahon Corporation X Safarispot Tarpaulin Shopper Bag Black & Jinahon Corporation X Safarispot Tarpaulin Wallet Black</span>
+                                                <b>30,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>2</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-2.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Alo Yoga</p>
+                                                <span>Iconic Shopper Tote Bag Grey Tiedye</span>
+                                                <b>67,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>3</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-3.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Adidas</p>
+                                                <span>Adidas x BAPE Duffle Bag Crew Green</span>
+                                                <b>178,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>4</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-4.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Doosan Bears x Safarispot</p>
+                                                <span>Uniform Pants Eco Bag - White</span>
+                                                <b>49,000원 </b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-01 -->
+                                </div><!-- swiper-slide -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-5.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-6.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-7.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/가방인기상품-8.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                <div class="swiper-slide">
+                                    <div class="depth-02">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>5</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-5.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Arc'teryx</p>
+                                                <span>Heliad 15 Backpack Rune</span>
+                                                <b>160,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>2</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>6</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-6.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Nike</p>
+                                                <span>ACG Daymax Crossbody Bag 3L Black College Grey</span>
+                                                <b>66,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankdownicon.png" alt="랭킹다운">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>7</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-7.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Kashiko</p>
+                                                <span>Leopard Print Shoulder Bag Blue Gray</span>
+                                                <b>53,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>8</b>
+                                            </div><!-- num -->
+                                            <img src="img/가방인기상품-8.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Salomon</p>
+                                                <span>Trailblazer 20 Light Pink</span>
+                                                <b>122,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankdownicon.png" alt="랭킹다운">
+                                                <p>2</p>
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-02 -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper poplist -->
                     </div><!-- list -->
 
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-1.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-2.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-3.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-4.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper poplist">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="depth-01">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>1</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-1.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Kwon Jin Ah x Safarispot</p>
+                                                <span>Jinahon Corporation X Safarispot Badge (5ea)</span>
+                                                <b>20,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>2</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-2.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>MLB</p>
+                                                <span>KARINA MLB EXCLUSIVE STRUCTURED BALLCAP</span>
+                                                <b>214,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>3</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-3.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>runwhither</p>
+                                                <span>Mesh Cap Black</span>
+                                                <b>39,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>4</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-4.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Pop Mart</p>
+                                                <span>Skullpanda You Found Me ! Series Plush Doll Pendant Sealed Case (9 Blind Boxes)</span>
+                                                <b>386,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-01 -->
+                                </div><!-- swiper-slide -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-5.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-6.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-7.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/패션잡화인기상품-8.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                <div class="swiper-slide">
+                                    <div class="depth-02">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>5</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-5.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Kwon Jin Ah x Safarispot</p>
+                                                <span>Jinahon Corporation X Safarispot Cap White/Black</span>
+                                                <b>35,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankdownicon.png" alt="랭킹다운">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>6</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-6.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>runwhither</p>
+                                                <span>Mesh Cap Red</span>
+                                                <b>39,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>7</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-7.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Montbell</p>
+                                                <span>Trekking Glasses Black Grey</span>
+                                                <b>111,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>8</b>
+                                            </div><!-- num -->
+                                            <img src="img/패션잡화인기상품-8.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Montbell</p>
+                                                <span>Trekking Glasses Silver Metallic Light Grey</span>
+                                                <b>141,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-02 -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper poplist -->
                     </div><!-- list -->
 
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-1.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-2.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-3.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-4.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper poplist">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="depth-01">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>1</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-1.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Diptyque</p>
+                                                <span>Fleur De Peau Eau De Parfum 75ml</span>
+                                                <b>211,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>811</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>2</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-2.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Diptyque</p>
+                                                <span>Fleur De Peau Eau De Parfum 100ml</span>
+                                                <b>229,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>784</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>3</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-3.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Santa Maria Novella</p>
+                                                <span>Fresia Eau de Cologne 50ml</span>
+                                                <b>91,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>928</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>4</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-4.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Prada</p>
+                                                <span>Blushing Care Lip Balm U001 Astral Pink</span>
+                                                <b>50,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>650</p>
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-01 -->
+                                </div><!-- swiper-slide -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-5.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-6.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-7.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/뷰티인기상품-8.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                <div class="swiper-slide">
+                                    <div class="depth-02">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>5</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-5.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Jo Malone</p>
+                                                <span>Blackberry & Bay Cologne 100ml</span>
+                                                <b>127,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>995</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>6</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-6.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Byredo</p>
+                                                <span>Mojave Ghost Eau De Parfum 50ml</span>
+                                                <b>246,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>857</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>7</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-7.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Diptyque</p>
+                                                <span>Orpheon Eau De Parfum 75ml</span>
+                                                <b>218,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>993</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>8</b>
+                                            </div><!-- num -->
+                                            <img src="img/뷰티인기상품-8.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Diptyque</p>
+                                                <span>Hair Mist Fleur De Peau 30ml</span>
+                                                <b>83,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>992</p>
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-02 -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper poplist -->
                     </div><!-- list -->
 
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-1.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-2.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-3.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-4.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper poplist">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="depth-01">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>1</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-1.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>TOWTOW.ARCHIVE</p>
+                                                <span>Clover Symbol Bracelet Clean White</span>
+                                                <b>48,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>2</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-2.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>AJOBYAJO</p>
+                                                <span>Black Light Beads Layered Bracelet Black</span>
+                                                <b>64,800원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>3</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-3.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Human Made</p>
+                                                <span>Heart Necklace Red</span>
+                                                <b>89,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>2</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>4</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-4.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Quarqor</p>
+                                                <span>#3106 Ring</span>
+                                                <b>19,500원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankdownicon.png" alt="랭킹다운">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-01 -->
+                                </div><!-- swiper-slide -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-5.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-6.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-7.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/주얼리인기상품-8.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                <div class="swiper-slide">
+                                    <div class="depth-02">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>5</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-5.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Riomeu</p>
+                                                <span>Snake Chain Bracelet 2.5mm</span>
+                                                <b>17,800원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankdownicon.png" alt="랭킹다운">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>6</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-6.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Gucci</p>
+                                                <span>Trademark Heart Pendant Necklace Silver</span>
+                                                <b>227,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>7</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-7.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Marc Jacobs</p>
+                                                <span>Heaven by Marc Jacobs Friendship Necklace Set Silver Ox</span>
+                                                <b>192,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankupicon.png" alt="랭킹업">
+                                                <p>3</p>
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>8</b>
+                                            </div><!-- num -->
+                                            <img src="img/주얼리인기상품-8.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Nonenon</p>
+                                                <span>Logo Flat Ring 3mm</span>
+                                                <b>20,300원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankdownicon.png" alt="랭킹다운">
+                                                <p>1</p>
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-02 -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper poplist -->
                     </div><!-- list -->
 
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-1.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-2.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-3.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-4.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper poplist">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="depth-01">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>1</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-1.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Beats</p>
+                                                <span>Solo 4 Wireless On Ear Headphone Jennie Special Edition Ruby Red</span>
+                                                <b>390,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>2</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-2.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Apple</p>
+                                                <span>iPad Pro 5th Gen 11-inch Wifi 256GB Standard Glass Space Black</span>
+                                                <b>1,420,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>3</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-3.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Pop Mart</p>
+                                                <span>Labubu The Monsters Wacky Mart Series Earphone Case</span>
+                                                <b>36,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>4</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-4.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Apple</p>
+                                                <span>AirPods 4th Gen with Active Noise Cancellation</span>
+                                                <b>231,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-01 -->
+                                </div><!-- swiper-slide -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-5.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-6.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-7.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                            <div class="item">
-                                <div class="num">
-                                    <b>1</b>
-                                </div><!-- num -->
-                                <img src="img/테크인기상품-8.png" alt="이번주인기상품">
-                                <div class="text">
-                                    <p>New Balance</p>
-                                    <span>204L Suede Mushr...</span>
-                                    <b>194,000원</b>
-                                </div><!-- text -->
-                                <div class="rank">
-                                    <img src="img/rankicon.png" alt="랭킹">
-                                </div>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                <div class="swiper-slide">
+                                    <div class="depth-02">
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>5</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-5.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Apple</p>
+                                                <span>iPhone 16 Pro 256GB White Titanium</span>
+                                                <b>1,595,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>6</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-6.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Apple</p>
+                                                <span>AirPods Max Lightning Silver</span>
+                                                <b>900,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>7</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-7.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>Pop Mart</p>
+                                                <span>Crybaby Crying Again Series Bear Earphone Bag</span>
+                                                <b>38,000원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                        <div class="item">
+                                            <div class="num">
+                                                <b>8</b>
+                                            </div><!-- num -->
+                                            <img src="img/테크인기상품-8.png" alt="이번주인기상품">
+                                            <div class="text">
+                                                <p>SINJIMORU</p>
+                                                <span>MagSafe M Airofit Basic Transparent Slim Case iPhone 17 16 15 14 13 12 Mini Plus Pro Max</span>
+                                                <b>15,900원</b>
+                                            </div><!-- text -->
+                                            <div class="rank">
+                                                <img src="img/rankicon.png" alt="랭킹">
+                                            </div>
+                                        </div><!-- item -->
+                                    </div><!-- depth-02 -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper poplist -->
                     </div><!-- list -->
                 </section><!-- section-05 -->
             </div><!-- inner -->

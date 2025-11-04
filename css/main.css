@@ -63,7 +63,7 @@ body {
     max-width: 480px;
     height: 100%;
     margin: 0 auto;
-    background-color: antiquewhite;
+    background-color: #fff;
 }
 
 .header .inner,
@@ -562,17 +562,15 @@ body {
     font-size: 20px;
     font-weight: 700;
 }
-.section-05 .tab_menu {
+.section-05 .tab_menu{
     display: flex;
     gap: 8px;
     margin-bottom: 20px;
-    overflow: auto;
 }
-.section-05 .tab_menu::-webkit-scrollbar {
-    display: none;
+.section-05 .tab_menu .swiper-slide {
+    width: auto !important;
 }
-
-.section-05 .tab_menu li {
+.section-05 .tab_menu .swiper-slide li {
     height: 30px;
     background-color: #E9E9E9;
     padding: 5px 15px;
@@ -585,33 +583,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.section-05 .tab_menu li.active {
+.section-05 .tab_menu .swiper-slide li.active {
     background-color: #F8742E;
     color: #fff;
     font-weight: 600;
 }
 .section-05 .list {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-    margin-left: 10px;
-    overflow: auto;
     display: none;
 }
 .section-05 .list.active {
-    display: block;
     display: flex;
     align-items: center;
     gap: 80px;
     margin-left: 10px;
-    overflow: auto;
-}
-.section-05 .list::-webkit-scrollbar {
-    display: none;
 }
 .section-05 .list .item {
-    width: 285px;
+    width: 355px;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -629,11 +618,10 @@ body {
     margin-right: 16px;
 }
 .section-05 .list .item .text {
+    width: 122px;
     display: flex;
     flex-direction: column;
     margin-right: 37px;
-    white-space: nowrap;
-    overflow: hidden;
 }
 .section-05 .list .item .text p {
     font-size: 13px;
@@ -644,13 +632,33 @@ body {
     font-size: 13px;
     font-weight: 500;
     margin-bottom: 10px;
+    width: 122px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+width: 122px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block; /* flex나 inline-block이면 안전 */
 }
 .section-05 .list .item .text b {
     font-size: 15px;
     font-weight: 700;
 }
 .section-05 .list .item .rank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-05 .list .item .rank img{
+    width: 10px;
     object-fit: cover;
+    margin: 5px;
+}
+.section-05 .list .item .rank p{
+    font-size: 12px;
+    font-weight: 600;
 }
 
 
