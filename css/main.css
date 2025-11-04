@@ -225,7 +225,7 @@ body {
 
 
 .main_visual .nav {
-    margin: 0 20px 75px 20px;
+    margin: 0 20px 100px 20px;
 }
 .main_visual .nav .gnb {
     display: flex;
@@ -265,11 +265,10 @@ body {
     border-bottom: 10px solid #eee;
 }
 .section-01 .title {
-    margin: 0 auto;
+    margin: 0 auto 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
 }
 .section-01 .title h2 {
     font-size: 20px;
@@ -335,11 +334,10 @@ body {
     border-bottom: 10px solid #eee;
 }
 .section-02 .title {
-    margin: 0 auto;
+    margin: 0 auto 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
 }
 .section-02 .title h2 {
     font-size: 20px;
@@ -414,7 +412,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .section-03 .title h2 {
     font-size: 20px;
@@ -466,14 +464,15 @@ body {
 
 
 .section-04 {
+    max-width: 480px;
     width: 402px;
-    padding: 80px 15px 105px;
     margin: 0 auto;
+    padding: 80px 15px 105px;
     border-bottom: 10px solid #eee;
 }
 .section-04 h2 {
     margin-left: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     font-size: 20px;
     font-weight: 700;
 }
@@ -518,7 +517,10 @@ body {
 
 
 .section-05 {
-    margin: 80px 20px 115px;
+    max-width: 480px;
+    width: 402px;
+    margin: 80px auto 115px;
+    padding: 0 0 0 20px;
 }
 .section-05 h2 {
     margin-bottom: 25px;
@@ -621,7 +623,6 @@ body {
     max-width: 480px;
     width: 100%;
     margin: 0 auto;
-    padding: 14px 25px 20px;
     background-color: #fff;
     border-top: 1px solid #E9E9E9;
     display: flex;
@@ -632,14 +633,23 @@ body {
     z-index: 1000;
 }
 .bottom_nav .tab_nav {
+    width: 402px;
+    margin: 0 auto;
+    padding: 14px 20px 20px;
     display: flex;
-    gap: 70px;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 }
 .bottom_nav .tab_nav li {
     width: 30px;
     height: 45px;
+    text-align: center;
+    cursor: pointer;
+}
+.bottom_nav .tab_nav li.active b{
+    color: #F8742E;
+    font-weight: bold;
 }
 .bottom_nav .tab_nav li:nth-child(3) {
     width: 40px;
@@ -656,6 +666,7 @@ body {
 .bottom_nav .tab_nav li b {
     font-size: 10px;
     font-weight: 500;
+    color: #8D8D8D;
 }
 
 
@@ -667,6 +678,7 @@ body {
     box-sizing: border-box;
 }
 .footer .inner{
+    width: 402px;
     padding: 30px 20px;
     margin: 0 auto;
 }

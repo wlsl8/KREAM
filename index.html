@@ -9,35 +9,39 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        var innerSwiper02 = new Swiper('.swiper-container', {
-            loop: true,
-            // autoplay: true,
-            slidesPerView: 'auto',
-            spaceBetween: 6,
-            centeredSlides: true
-        });
-
-
         window.onload = () => {
-            let tabMenu = document.querySelectorAll('.tab_menu li');
-            let tabCont = document.querySelectorAll('.list');
+            const tabs = document.querySelectorAll(".tab_nav li");
 
-
-            for (let i = 0; i < tabMenu.length; i++) {
-                tabMenu[i].addEventListener('click', () => {
-
-                    tabMenu.forEach(tabMenuIndex => {
-                        tabMenuIndex.classList.remove('active');
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    // 1. 모든 li에서 active 제거
+                    tabs.forEach((t) => {
+                        t.classList.remove("active");
+                        const img = t.querySelector("img");
+                        const src = img.getAttribute("src");
+                        // "on" 아이콘을 "off" 아이콘으로 되돌리기
+                        img.setAttribute("src", src.replace("_on", "_off"));
                     });
-                    tabMenu[i].classList.add('active');
 
-
-                    tabCont.forEach(tabContIndex => {
-                        tabContIndex.classList.remove('active');
-                    });
-                    tabCont[i].classList.add('active');
+                    // 2. 현재 클릭한 li에 active 추가
+                    tab.classList.add("active");
+                    const img = tab.querySelector("img");
+                    const src = img.getAttribute("src");
+                    // "off" 아이콘을 "on" 아이콘으로 변경
+                    img.setAttribute("src", src.replace("_off", "_on"));
                 });
-            };
+            });
+
+
+
+            var innerSwiper02 = new Swiper('.swiper-container', {
+                loop: true,
+                // autoplay: true,
+                slidesPerView: 'auto',
+                spaceBetween: 6,
+                centeredSlides: true
+            });
+
 
             var swiper = new Swiper(".swiper.recent", {
                 slidesPerView: 3.2,
@@ -333,7 +337,8 @@
                                         <a href="#">
                                             <img src="img/최근본상품img-5.png" alt="최근본상품">
                                             <div class="text">
-                                                <p>Musinsa Standard City Leisure Hooded Light Down Jacket Cloudy Blue</p>
+                                                <p>Musinsa Standard City Leisure Hooded Light Down Jacket Cloudy Blue
+                                                </p>
                                                 <b>121,000원</b>
                                                 <span>관심 1.7만</span>
                                             </div><!-- text -->
@@ -504,7 +509,8 @@
                                         <a href="#">
                                             <img src="img/취향맞춤추천상품-13.png" alt="취향맞춤추천상품">
                                             <div class="text">
-                                                <p>Beats Solo 4 Wireless On Ear Headphone Jennie Special Edition Ruby Red</p>
+                                                <p>Beats Solo 4 Wireless On Ear Headphone Jennie Special Edition Ruby
+                                                    Red</p>
                                                 <b>395,000원</b>
                                                 <span>관심 636</span>
                                             </div><!-- text -->
@@ -1600,24 +1606,24 @@
 
         <div class="bottom_nav">
             <ul class="tab_nav">
-                <li>
-                    <img src="img/homeicon.png" alt="홈아이콘">
+                <li class="active">
+                    <img src="img/home_on.png" alt="홈아이콘">
                     <b>HOME</b>
                 </li>
                 <li>
-                    <img src="img/styleicon.png" alt="스타일아이콘">
+                    <img src="img/style_off.png" alt="스타일아이콘">
                     <b>STYLE</b>
                 </li>
                 <li>
-                    <img src="img/shopicon.png" alt="샵아이콘">
+                    <img src="img/shop_off.png" alt="샵아이콘">
                     <b>SHOP</b>
                 </li>
                 <li>
-                    <img src="img/savedicon.png" alt="저장아이콘">
+                    <img src="img/save_off.png" alt="저장아이콘">
                     <b>SAVED</b>
                 </li>
                 <li>
-                    <img src="img/myicon.png" alt="마이아이콘">
+                    <img src="img/my_off.png" alt="마이아이콘">
                     <b>MY</b>
                 </li>
             </ul><!-- tab_nav -->
