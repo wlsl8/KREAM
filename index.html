@@ -10,36 +10,48 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         window.onload = () => {
-            const tabs = document.querySelectorAll(".tab_nav li");
+            function setupTabs(selector) {
+                const tabs = document.querySelectorAll(selector);
 
-            tabs.forEach((tab) => {
-                tab.addEventListener("click", () => {
-                    // 1. 모든 li에서 active 제거
-                    tabs.forEach((t) => {
-                        t.classList.remove("active");
-                        const img = t.querySelector("img");
-                        const src = img.getAttribute("src");
-                        // "on" 아이콘을 "off" 아이콘으로 되돌리기
-                        img.setAttribute("src", src.replace("_on", "_off"));
+                if (tabs.length === 0) return;
+
+                // 첫 번째 탭 활성화
+                const first = tabs[0];
+                first.classList.add("active");
+                const firstImg = first.querySelector("img");
+                if (firstImg) firstImg.src = firstImg.src.replace("_off", "_on");
+
+                tabs.forEach(tab => {
+                    tab.addEventListener("click", function (e) {
+                        e.preventDefault(); // <a> 클릭 시 이동 방지
+
+                        tabs.forEach(t => {
+                            t.classList.remove("active");
+                            const img = t.querySelector("img");
+                            if (img) img.src = img.src.replace("_on", "_off");
+                        });
+
+                        tab.classList.add("active");
+                        const img = tab.querySelector("img");
+                        if (img) img.src = img.src.replace("_off", "_on");
                     });
-
-                    // 2. 현재 클릭한 li에 active 추가
-                    tab.classList.add("active");
-                    const img = tab.querySelector("img");
-                    const src = img.getAttribute("src");
-                    // "off" 아이콘을 "on" 아이콘으로 변경
-                    img.setAttribute("src", src.replace("_off", "_on"));
                 });
-            });
-
+            }
+            // 상단 GNB 적용
+            setupTabs(".main_visual .gnb li");
+            // 하단 탭 적용
+            setupTabs(".bottom_nav .tab_nav li");
 
 
             var innerSwiper02 = new Swiper('.swiper-container', {
                 loop: true,
-                // autoplay: true,
                 slidesPerView: 'auto',
                 spaceBetween: 6,
-                centeredSlides: true
+                centeredSlides: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false
+                }
             });
 
 
@@ -242,31 +254,31 @@
                         <ul class="gnb">
                             <li>
                                 <a href="#">
-                                    <img src="img/on-추천아이콘.png" alt="추천아이콘">
+                                    <img src="img/추천_off.png" alt="추천아이콘">
                                 </a>
                                 <strong>추천</strong>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/0ff-신상아이콘.png" alt="신상아이콘">
+                                    <img src="img/신상_off.png" alt="신상아이콘">
                                 </a>
                                 <strong>신상</strong>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/0ff-랭킹아이콘.png" alt="랭킹아이콘">
+                                    <img src="img/랭킹_off.png" alt="랭킹아이콘">
                                 </a>
                                 <strong>랭킹</strong>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/0ff-중고아이콘.png" alt="중고아이콘">
+                                    <img src="img/중고_off.png" alt="중고아이콘">
                                 </a>
                                 <strong>중고</strong>
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/0ff-이벤트아이콘.png" alt="이벤트아이콘">
+                                    <img src="img/이벤트_off.png" alt="이벤트아이콘">
                                 </a>
                                 <strong>이벤트</strong>
                             </li>
