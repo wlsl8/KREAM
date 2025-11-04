@@ -37,8 +37,25 @@
                     });
                     tabCont[i].classList.add('active');
                 });
-
             };
+
+            var swiper = new Swiper(".swiper.recent", {
+                slidesPerView: 3.2,
+                spaceBetween: 10,
+            });
+
+
+            var swiper = new Swiper(".swiper.recommend", {
+                slidesPerView: "auto",
+                spaceBetween: 10,
+            });
+
+
+            var swiper = new Swiper(".swiper.new", {
+                slidesPerView: "auto",
+                spaceBetween: 20,
+            });
+
         };//end
 
     </script>
@@ -49,19 +66,13 @@
         <header class="header">
             <div class="inner">
                 <h1 class="logo">
-                    <a href="#">
-                        <img src="img/logo.png" alt="KREAM로고이미지">
-                    </a>
+                    <a href="#">KREAM</a>
                 </h1><!-- logo -->
 
                 <nav class="nav">
-                    <button class="bell">
-                        <img src="img/알림아이콘.png" alt="알림아이콘">
-                    </button><!-- bell -->
-                    <button class="cart">
-                        <img src="img/장바구니아이콘.png" alt="장바구니아이콘">
-                    </button><!-- cart -->
-                </nav><!-- nav -->
+                    <a href="#"><img src="img/알림아이콘.svg" alt="알림아이콘"></a>
+                    <a href="#"><img src="img/장바구니아이콘.svg" alt="장바구니아이콘"></a>
+                </nav><!-- .nav end -->
             </div><!-- inner -->
         </header><!-- header -->
 
@@ -79,7 +90,7 @@
                     <div class=" swiper swiper-container">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="img/main-image-1.jpg" alt="메인이미지">
+                                <img src="img/main-image-1.png" alt="메인이미지">
                                 <div class="text">
                                     <strong>Puma x Undermycar</strong>
                                     <b>콜라보 에디션 발매</b>
@@ -91,7 +102,7 @@
                             </div><!-- swiper slide end -->
 
                             <div class="swiper-slide">
-                                <img src="img/main-image-2.jpg" alt="메인이미지">
+                                <img src="img/main-image-2.png" alt="메인이미지">
                                 <div class="text">
                                     <strong>뉴발란스</strong>
                                     <b>최저가 도전 -20%</b>
@@ -103,7 +114,7 @@
                             </div><!-- swiper slide end -->
 
                             <div class="swiper-slide">
-                                <img src="img/main-image-3.jpg" alt="메인이미지">
+                                <img src="img/main-image-3.png" alt="메인이미지">
                                 <div class="text">
                                     <strong>RECTO</strong>
                                     <b>25FW 컬렉션발매</b>
@@ -115,7 +126,7 @@
                             </div><!-- swiper slide end -->
 
                             <div class="swiper-slide">
-                                <img src="img/main-image-4.jpg" alt="메인이미지">
+                                <img src="img/main-image-4.png" alt="메인이미지">
                                 <div class="text">
                                     <strong>경량 패딩을 꺼낼 시간</strong>
                                     <b>미리 준비하는 간절기 필수템</b>
@@ -256,82 +267,102 @@
                     </div><!-- nav -->
                 </section><!-- main_visual -->
 
+
+
                 <section class="section-01">
                     <div class="title">
                         <h2>최근 본 상품</h2>
-                        <a href="#"><img src="img/모두보기아이콘.png" alt=""></a>
+                        <a href="#"><img src="img/더보기 아이콘.svg" alt="더보기버튼"></a>
                     </div><!-- title -->
                     <div class="list">
-                        <div class="item">
-                            <a href="#">
-                                <img src="img/최근본상품img-1.png" alt="최근본상품">
-                                <div class="text">
-                                    <p>Arc'teryx Atom SL Hoody Solitude</p>
-                                    <b>410,000원</b>
-                                    <span>관심 5,307</span>
-                                </div><!-- text -->
-                            </a>
-                        </div><!-- item -->
-                        <div class="item">
-                            <a href="#">
-                                <img src="img/최근본상품img-2.png" alt="최근본상품">
-                                <div class="text">
-                                    <p>Salomon XA Pr...</p>
-                                    <b>179,000원</b>
-                                    <span>관심 1.2만</span>
-                                </div><!-- text -->
-                            </a>
-                        </div><!-- item -->
-                        <div class="item">
-                            <a href="#">
-                                <img src="img/최근본상품img-3.png" alt="최근본상품">
-                                <div class="text">
-                                    <p>(W) Asics Gel-...</p>
-                                    <b>155,000원</b>
-                                    <span>관심 7.8만</span>
-                                </div><!-- text -->
-                            </a>
-                        </div><!-- item -->
-                        <div class="item">
-                            <a href="#">
-                                <img src="img/최근본상품img-4.png" alt="최근본상품">
-                                <div class="text">
-                                    <p>Keen Shanti Bl...</p>
-                                    <b>69,000원</b>
-                                    <span>관심 1.2만</span>
-                                </div><!-- text -->
-                            </a>
-                        </div><!-- item -->
-                        <div class="item">
-                            <a href="#">
-                                <img src="img/최근본상품img-5.png" alt="최근본상품">
-                                <div class="text">
-                                    <p>Musinsa Stan...</p>
-                                    <b>121,000원</b>
-                                    <span>관심 1.7만</span>
-                                </div><!-- text -->
-                            </a>
-                        </div><!-- item -->
-                        <div class="item">
-                            <a href="#">
-                                <img src="img/최근본상품img-6.png" alt="최근본상품">
-                                <div class="text">
-                                    <p>Nike SB Air Ma...</p>
-                                    <b>225,000원</b>
-                                    <span>관심 734</span>
-                                </div><!-- text -->
-                            </a>
-                        </div><!-- item -->
-                        <div class="item">
-                            <a href="#">
-                                <img src="img/최근본상품img-7.png" alt="최근본상품">
-                                <div class="text">
-                                    <p>Sony WH-1000...</p>
-                                    <b>526,000원</b>
-                                    <span>관심 2,138</span>
-                                </div><!-- text -->
-                            </a>
-                        </div><!-- item -->
+                        <div class="swiper recent">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/최근본상품img-1.png" alt="최근본상품">
+                                            <div class="text">
+                                                <p>Arc'teryx Atom SL Hoody Solitude</p>
+                                                <b>410,000원</b>
+                                                <span>관심 5,307</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/최근본상품img-2.png" alt="최근본상품">
+                                            <div class="text">
+                                                <p>Salomon XA Pro 3D Black Magnet</p>
+                                                <b>179,000원</b>
+                                                <span>관심 1.2만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/최근본상품img-3.png" alt="최근본상품">
+                                            <div class="text">
+                                                <p>(W) Asics Gel-Kayano 14 White Midnight</p>
+                                                <b>155,000원</b>
+                                                <span>관심 7.8만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/최근본상품img-4.png" alt="최근본상품">
+                                            <div class="text">
+                                                <p>Keen Shanti Black Dawn Blue</p>
+                                                <b>69,000원</b>
+                                                <span>관심 1.2만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/최근본상품img-5.png" alt="최근본상품">
+                                            <div class="text">
+                                                <p>Musinsa Standard City Leisure Hooded Light Down Jacket Cloudy Blue</p>
+                                                <b>121,000원</b>
+                                                <span>관심 1.7만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/최근본상품img-6.png" alt="최근본상품">
+                                            <div class="text">
+                                                <p>Nike SB Air Max 95 Summit White and Cactus Flower</p>
+                                                <b>225,000원</b>
+                                                <span>관심 734</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/최근본상품img-7.png" alt="최근본상품">
+                                            <div class="text">
+                                                <p>Sony WH-1000XM6 Black</p>
+                                                <b>526,000원</b>
+                                                <span>관심 2,138</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper recent -->
                     </div><!-- list -->
                 </section><!-- section-01 -->
 
@@ -339,154 +370,156 @@
                 <section class="section-02">
                     <div class="title">
                         <h2>내 취향 맞춤 추천 상품</h2>
-                        <a href="#"><img src="img/모두보기아이콘.png" alt=""></a>
+                        <a href="#"><img src="img/더보기 아이콘.svg" alt="더보기버튼"></a>
                     </div><!-- title -->
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-1.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Fila Echappe ...</p>
-                                        <b>90,000원</b>
-                                        <span>관심 3만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-2.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Porter Freest...</p>
-                                        <b>189,000원</b>
-                                        <span>관심 6,102</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-3.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Birkenstock B...</p>
-                                        <b>219,000원</b>
-                                        <span>관심 4,916</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-4.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Nike Initiator ...</p>
-                                        <b>65,000원</b>
-                                        <span>관심 9,821만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-5.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Asics x Cecilie...</p>
-                                        <b>448,000원</b>
-                                        <span>관심 1.3만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-6.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Arc'teryx Squ...</p>
-                                        <b>305,000원</b>
-                                        <span>관심 4.5만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-7.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Needles Track...</p>
-                                        <b>432,000원</b>
-                                        <span>관심 4,474</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper recommend">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-1.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Fila Echappe Choco</p>
+                                                <b>90,000원</b>
+                                                <span>관심 3만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-2.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Porter Freestyle Multi Coin Case Brown</p>
+                                                <b>189,000원</b>
+                                                <span>관심 6,102</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-3.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Birkenstock Boston Soft Footbed Mink - Regular</p>
+                                                <b>219,000원</b>
+                                                <span>관심 4,916</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-4.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Nike Initiator Metallic Silver Black</p>
+                                                <b>65,000원</b>
+                                                <span>관심 9,821만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-5.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Asics x Cecilie Bahnsen GT-2160 White</p>
+                                                <b>448,000원</b>
+                                                <span>관심 1.3만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-6.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Arc'teryx Squamish Hoody Black</p>
+                                                <b>305,000원</b>
+                                                <span>관심 4.5만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-7.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Needles Track Jacket Poly Smooth Ice White</p>
+                                                <b>432,000원</b>
+                                                <span>관심 4,474</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-8.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Fila Echappe ...</p>
-                                        <b>71,000원</b>
-                                        <span>관심 3.3만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-9.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Asics Unlimite...</p>
-                                        <b>170,000원</b>
-                                        <span>관심 1.2만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-10.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Adidas Samba ...</p>
-                                        <b>80,000원</b>
-                                        <span>관심 13.4만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-11.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Adidas Spezial...</p>
-                                        <b>76,000원</b>
-                                        <span>관심 6만</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-12.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>The North Fac...</p>
-                                        <b>223,000원</b>
-                                        <span>관심 2,623</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-13.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Beats Solo 4 ...</p>
-                                        <b>395,000원</b>
-                                        <span>관심 636</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/취향맞춤추천상품-14.png" alt="취향맞춤추천상품">
-                                    <div class="text">
-                                        <p>Gentle Monste...</p>
-                                        <b>495,000원</b>
-                                        <span>관심 9,791</span>
-                                    </div><!-- text -->
-                                </a>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-8.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Fila Echappe MS Silver Moon</p>
+                                                <b>71,000원</b>
+                                                <span>관심 3.3만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-9.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Asics Unlimited Gel-Kayano 14 Carrier Grey Black</p>
+                                                <b>170,000원</b>
+                                                <span>관심 1.2만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-10.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Adidas Samba OG Black White Gum</p>
+                                                <b>80,000원</b>
+                                                <span>관심 13.4만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-11.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Adidas Spezial Handball Collegiate Navy</p>
+                                                <b>76,000원</b>
+                                                <span>관심 6만</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-12.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>The North Face Wave LT On Jacket Light Blue - 25FW</p>
+                                                <b>223,000원</b>
+                                                <span>관심 2,623</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-13.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Beats Solo 4 Wireless On Ear Headphone Jennie Special Edition Ruby Red</p>
+                                                <b>395,000원</b>
+                                                <span>관심 636</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/취향맞춤추천상품-14.png" alt="취향맞춤추천상품">
+                                            <div class="text">
+                                                <p>Gentle Monster x Maison Margiela MM206 Black Gray</p>
+                                                <b>495,000원</b>
+                                                <span>관심 9,791</span>
+                                            </div><!-- text -->
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper recommend -->
                     </div><!-- list -->
                 </section><!-- section-02 -->
 
@@ -494,145 +527,146 @@
                 <section class="section-03">
                     <div class="title">
                         <h2>신규 발매</h2>
-                        <a href="#"><img src="img/모두보기아이콘.png" alt=""></a>
+                        <a href="#"><img src="img/더보기 아이콘.svg" alt="더보기버튼"></a>
                     </div><!-- title -->
                     <div class="list">
-                        <div class="depth-01">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-1.png" alt="신규발매상품">
-                                    <b>Beats</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-2.png" alt="신규발매상품">
-                                    <b>Pop Mart</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-3.png" alt="신규발매상품">
-                                    <b>Tamagotchi</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-4.png" alt="신규발매상품">
-                                    <b>Asics</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-5.png" alt="신규발매상품">
-                                    <b>Pop Mart</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-6.png" alt="신규발매상품">
-                                    <b>Ricoh</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-7.png" alt="신규발매상품">
-                                    <b>UMARMUNG</b>
-                                </a>
-                            </div><!-- item -->
-                        </div><!-- depth-01 -->
+                        <div class="swiper new">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-1.png" alt="신규발매상품">
+                                            <b>Beats</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-2.png" alt="신규발매상품">
+                                            <b>Pop Mart</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-3.png" alt="신규발매상품">
+                                            <b>Tamagotchi</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-4.png" alt="신규발매상품">
+                                            <b>Asics</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-5.png" alt="신규발매상품">
+                                            <b>Pop Mart</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-6.png" alt="신규발매상품">
+                                            <b>Ricoh</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-7.png" alt="신규발매상품">
+                                            <b>UMARMUNG</b>
+                                        </a>
+                                    </div><!-- item -->
 
-                        <div class="depth-02">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-8.png" alt="신규발매상품">
-                                    <b>MLB</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-9.png" alt="신규발매상품">
-                                    <b>Nike</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-10.png" alt="신규발매상품">
-                                    <b>Gentle Monster</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-11.png" alt="신규발매상품">
-                                    <b>FILA</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-12.png" alt="신규발매상품">
-                                    <b>Jordan</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-13.png" alt="신규발매상품">
-                                    <b>Satisfy</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-14.png" alt="신규발매상품">
-                                    <b>Knitted</b>
-                                </a>
-                            </div><!-- item -->
-                        </div><!-- depth-02 -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-8.png" alt="신규발매상품">
+                                            <b>MLB</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-9.png" alt="신규발매상품">
+                                            <b>Nike</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-10.png" alt="신규발매상품">
+                                            <b>Gentle Monster</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-11.png" alt="신규발매상품">
+                                            <b>FILA</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-12.png" alt="신규발매상품">
+                                            <b>Jordan</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-13.png" alt="신규발매상품">
+                                            <b>Satisfy</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-14.png" alt="신규발매상품">
+                                            <b>Knitted</b>
+                                        </a>
+                                    </div><!-- item -->
 
-                        <div class="depth-03">
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-15.png" alt="신규발매상품">
-                                    <b>Musinsa Stan...</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-16.png" alt="신규발매상품">
-                                    <b>Salomon</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-17.png" alt="신규발매상품">
-                                    <b>The North Face</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-18.png" alt="신규발매상품">
-                                    <b>The North Face</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-19.png" alt="신규발매상품">
-                                    <b>Adidas</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-20.png" alt="신규발매상품">
-                                    <b>YESEYESEE</b>
-                                </a>
-                            </div><!-- item -->
-                            <div class="item">
-                                <a href="#">
-                                    <img src="img/신규발매상품-21.png" alt="신규발매상품">
-                                    <b>ROARLNDRAD</b>
-                                </a>
-                            </div><!-- item -->
-                        </div><!-- depth-03 -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-15.png" alt="신규발매상품">
+                                            <b>Musinsa Standard</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-16.png" alt="신규발매상품">
+                                            <b>Salomon</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-17.png" alt="신규발매상품">
+                                            <b>The North Face</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-18.png" alt="신규발매상품">
+                                            <b>The North Face</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-19.png" alt="신규발매상품">
+                                            <b>Adidas</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-20.png" alt="신규발매상품">
+                                            <b>YESEYESEE</b>
+                                        </a>
+                                    </div><!-- item -->
+                                    <div class="item">
+                                        <a href="#">
+                                            <img src="img/신규발매상품-21.png" alt="신규발매상품">
+                                            <b>ROARLNDRAD</b>
+                                        </a>
+                                    </div><!-- item -->
+                                </div><!-- swiper-slide -->
+                            </div><!-- swiper-wrapper -->
+                        </div><!-- swiper new -->
                     </div><!-- list -->
                 </section><!-- section-03 -->
+
 
 
                 <section class="section-04">
@@ -666,7 +700,7 @@
                             <div class="item">
                                 <a href="#">
                                     <img src="img/추천브랜드-5.png" alt="추천브랜드">
-                                    <b>New Bal...</b>
+                                    <b>New Balance</b>
                                 </a>
                             </div><!-- item -->
                         </div><!-- depth-01 -->
@@ -693,7 +727,7 @@
                             <div class="item">
                                 <a href="#">
                                     <img src="img/추천브랜드-9.png" alt="추천브랜드">
-                                    <b>The Nor...</b>
+                                    <b>The North Face</b>
                                 </a>
                             </div><!-- item -->
                             <div class="item">
@@ -1643,10 +1677,10 @@
                             <li><img src="img/아래더보기아이콘.png" alt="아래더보기아이콘"></li>
                         </ul><!-- info -->
                     </div><!-- snsinfo -->
-                    <p>크림(주)는 통신판매 중개자로서 통신판매의 당사자가 아닙니다. 본 상품은<br>
-                        개별 판매자가 등록한 상품으로 상품, 상품정보, 거래에 관한 의무와 책임은 각<br>
-                        판매자에게 있습니다. 단, 이용약관 및 정책, 기타 거래 체결 과정에서 고지하는<br>
-                        내용 등에 따라 검수하고 보증하는 내용에 대한 책임은 크림(주)에 있습니다.</p>
+                    <p>크림(주)는 통신판매 중개자로서 통신판매의 당사자가 아닙니다.<br>
+                        본 상품은 개별 판매자가 등록한 상품으로 상품, 상품정보, 거래에 관한 의무와<br>
+                        책임은 각 판매자에게 있습니다. 단, 이용약관 및 정책, 기타 거래 체결 과정<br>
+                        에서 고지하는 내용 등에 따라 검수하고 보증하는 내용에 대한 책임은 크림(주)에 있습니다.</p>
                 </div><!-- servise_wrap -->
             </div><!-- inner -->
         </footer><!-- footer -->
