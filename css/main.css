@@ -67,8 +67,7 @@ body {
 }
 
 .header .inner,
-.main .inner,
-.footer .inner{
+.main .inner{
     max-width: 480px;
     width: 402px;
     margin: 0 auto;
@@ -76,7 +75,7 @@ body {
 
 
 .header .inner{
-    padding: 60px 20px 10px 20px;
+    padding: 30px 20px 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +85,7 @@ body {
     font-size: 23px;
     font-weight: bold;
     color: #F8742E;
+    -webkit-text-stroke: 2px #F8742E;
 }
 .header .inner .nav{
     display: flex;
@@ -133,7 +133,7 @@ body {
     border: 0;
 }
 .main .inner .search input:focus{
-    outline: 2px solid #333;
+    outline: 1.5px solid #595959;
     border: 0;
     color: #333;
 }
@@ -518,7 +518,7 @@ body {
 
 
 .section-05 {
-    margin: 0 20px 115px;
+    margin: 80px 20px 115px;
 }
 .section-05 h2 {
     margin-bottom: 25px;
@@ -621,7 +621,7 @@ body {
     max-width: 480px;
     width: 100%;
     margin: 0 auto;
-    padding: 12px 25px 32px;
+    padding: 14px 25px 20px;
     background-color: #fff;
     border-top: 1px solid #E9E9E9;
     display: flex;
@@ -631,10 +631,9 @@ body {
     bottom: 0;
     z-index: 1000;
 }
-
 .bottom_nav .tab_nav {
     display: flex;
-    gap: 50px;
+    gap: 70px;
     align-items: center;
     text-align: center;
 }
@@ -661,6 +660,7 @@ body {
 
 
 .footer {
+    max-width: 480px;
     width: 100%;
     margin: 0 auto;
     background-color: #F1F1F1;
@@ -669,6 +669,19 @@ body {
 .footer .inner{
     padding: 30px 20px;
     margin: 0 auto;
+}
+.footer .inner .info_wrap{
+    position: relative;
+}
+.footer .inner .info_wrap::before{
+    content: '';
+    max-width: 480px;
+    width: 100%;
+    height: 1px;
+    background-color: #E9E9E9;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
 }
 .footer .inner .info_wrap .address {
     display: flex;
@@ -767,6 +780,10 @@ body {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+.footer .inner .servise_wrap .snsinfo .info li{
+    font-size: 12px;
+    font-weight: 400;
 }
 .footer .inner .servise_wrap .snsinfo .info li img {
     height: 7px;
