@@ -544,7 +544,7 @@ body {
     max-width: 480px;
     width: 402px;
     margin: 80px auto 115px;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 .section-05 h2 {
     margin-bottom: 25px;
@@ -588,8 +588,14 @@ body {
     gap: 80px;
     margin-left: 10px;
 }
+.section-05 .list .depth-01,
+.section-05 .list .depth-02{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 .section-05 .list .item {
-    width: 355px;
+    width: 350px;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -605,13 +611,13 @@ body {
     width: 22.1%;
     height: 100%;
     object-fit: cover;
-    margin-right: 16px;
+   
 }
 .section-05 .list .item .text {
     width: 122px;
     display: flex;
     flex-direction: column;
-    margin-right: 37px;
+  
 }
 .section-05 .list .item .text p {
     font-size: 13px;
@@ -626,11 +632,11 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-width: 122px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block; /* flex나 inline-block이면 안전 */
+    width: 122px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
 }
 .section-05 .list .item .text b {
     font-size: 15px;
