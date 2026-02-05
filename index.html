@@ -15,7 +15,6 @@
 
                 if (tabs.length === 0) return;
 
-                // 첫 번째 탭 활성화
                 const first = tabs[0];
                 first.classList.add("active");
                 const firstImg = first.querySelector("img");
@@ -23,7 +22,7 @@
 
                 tabs.forEach(tab => {
                     tab.addEventListener("click", function (e) {
-                        e.preventDefault(); // <a> 클릭 시 이동 방지
+                        e.preventDefault();
 
                         tabs.forEach(t => {
                             t.classList.remove("active");
@@ -37,9 +36,7 @@
                     });
                 });
             }
-            // 상단 GNB 적용
             setupTabs(".main_visual .gnb li");
-            // 하단 탭 적용
             setupTabs(".bottom_nav .tab_nav li");
 
 
@@ -48,28 +45,31 @@
 
             tabs.forEach((tab, index) => {
                 tab.addEventListener('click', () => {
-                    // 1. 모든 탭 비활성화
+                    
                     tabs.forEach(t => t.classList.remove('active'));
-                    // 2. 클릭한 탭 활성화
                     tab.classList.add('active');
 
-                    // 3. 모든 리스트 숨기기
                     lists.forEach(list => list.classList.remove('active'));
-                    // 4. 클릭한 탭에 해당하는 리스트 보이기
                     lists[index].classList.add('active');
                 });
             });
 
-            var innerSwiper02 = new Swiper('.swiper-container', {
-                loop: true,
+            var swiper = new Swiper('.swiper-container', {
                 slidesPerView: 'auto',
                 spaceBetween: 6,
                 centeredSlides: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
                 autoplay: {
-                    delay: 3000,
+                    delay: 3500,
                     disableOnInteraction: false
-                }
+                },
+                loop: true
             });
+
+            
 
 
             var swiper = new Swiper(".swiper.recent", {
